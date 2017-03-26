@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.6)
+project(leetcode)
+
+set(CMAKE_CXX_STANDARD 11)
+
+set(SOURCE_FILES main.cpp)
+set(1FILE 2sum.cpp)
+set(2FILE add_two_num.cpp)
+set(3FILE longest_substring_without_repeating_char.cpp)
+set(7FILE reverse_integer.cpp)
+add_executable(leetcode ${SOURCE_FILES})
+add_executable(2sum ${1FILE})
+add_executable(add_two_num ${2FILE})
+add_executable(longest_substring_without_repeating_char ${3FILE})
+add_executable(reverse_integer ${7FILE})
