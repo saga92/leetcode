@@ -13,6 +13,7 @@ struct ListNode {
     ListNode(int x) : val(x), next(NULL) {}
  };
 
+/*
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
@@ -32,6 +33,21 @@ public:
             reverse(head->next)->next=head;
         }
         return head;
+    }
+};
+*/
+
+class Solution{
+public:
+    ListNode* reverseList(ListNode* head){
+        ListNode *pre=NULL;
+        while(head){
+            ListNode* next=head->next;
+            head->next=pre;
+            pre=head;
+            head=next;
+        }
+        return pre;
     }
 };
 
