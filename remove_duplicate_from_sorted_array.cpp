@@ -9,8 +9,8 @@ public:
             if(nums[i]!=nums[i-1]){
                 if(pre_pos<(i-1)){
                     nums[pre_pos+1]=nums[i];
-                    pre_pos++;
                 }
+                pre_pos++;
             }else len--;
         }
         nums.resize(len);
@@ -19,7 +19,7 @@ public:
 };
 
 int main(){
-    vector<int> vec={1,1,2};
+    vector<int> vec={1,1,2,2,3,3,3};
     Solution solution;
     int res=solution.removeDuplicates(vec);
     return 0;
