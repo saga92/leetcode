@@ -1,6 +1,7 @@
 #include<string>
 #include<sstream>
 #include<unordered_map>
+#include <iostream>
 
 using namespace std;
 class Solution {
@@ -14,8 +15,14 @@ public:
             if(i==n||mp[pattern[i]]!=ms[s]){
                 return false;
             }
-            mp[pattern[i]]=ms[s]=i+1;
+            mp[pattern[i]]=ms[s]=i+1; // map init element with 0.
         }
         return i==n;
     }
 };
+
+int main(){
+    Solution solution;
+    bool res=solution.wordPattern("abba","dog cat cat fish");
+    return 0;
+}
