@@ -7,6 +7,8 @@
  * };
  */
 #include<cstdio>
+#include <cstdlib>
+
 struct ListNode {
     int val;
     ListNode *next;
@@ -14,11 +16,25 @@ struct ListNode {
  };
 
 class Solution {
+private:
+    ListNode* head;
 public:
     Solution(ListNode* head) {
+        this->head=head;
     }
 
     int getRandom() {
+        int res=head->val;
+        ListNode* nextNode=head->next;
+        int i=2,j=0;
+        while(nextNode){
+            j=rand()%i;
+            if(j==0)
+                res=nextNode->val;
+            i++;
+            nextNode=nextNode->next;
+        }
+        return res;
     }
 };
 
