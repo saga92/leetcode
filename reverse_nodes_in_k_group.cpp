@@ -25,7 +25,7 @@ public:
                 next=cur->next;
             }
             pre=cur;
-            n-=k;
+            num-=k;
         }
         return preheader->next;
     }
